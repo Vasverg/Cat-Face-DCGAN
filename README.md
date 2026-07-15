@@ -52,6 +52,8 @@ The discriminator receives a `3 × 64 × 64` image and reduces it to a single pr
 | Checkpoint interval | Every 25 epochs |
 
 The code automatically uses CUDA when a compatible GPU is available; otherwise, it runs on the CPU.
+> [!IMPORTANT]
+> It is highly recommended that you have a decent GPU for this project.
 
 ## Data Preparation
 
@@ -68,7 +70,15 @@ project-root/
 
 The custom `FlatImageDataset` class scans these directories recursively, so class-specific subfolders are not required.
 
-
+## Requirements
+ 
+```
+torch
+torchvision
+pillow
+matplotlib
+tqdm
+```
 
 Install the required packages:
 
